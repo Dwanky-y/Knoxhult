@@ -139,6 +139,11 @@ class Knoxhult {
         final String computerMove = getComputerMove();
         System.out.println("The Computer Picked: " + computerMove);
 
+        if (userMove == computerMove) {
+            System.out.println("Game is a tie, Computer Wins!");
+            return "Computer";
+        }
+
         // Check if user has won
         if (userMove == "Revskar" && computerMove == "Utlangen") {
             return "User";
